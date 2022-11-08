@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh("python3 /Users/moyi/.jenkins/workspace/Test/feishutongzhi.py $JOB_URL $JOB_NAME")
             }
         }
         stage('Test') {
