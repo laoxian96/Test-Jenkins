@@ -6,6 +6,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh('npm install')
+                sh('npm start')
                 sh("python3 /Users/moyi/.jenkins/workspace/Test/feishutongzhi.py $JOB_URL $JOB_NAME $BUILD_NUMBER")
             }
         }
